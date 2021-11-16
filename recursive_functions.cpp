@@ -1,12 +1,35 @@
+//*****************************************************************************
+//P R O G R A M	H E A D E R
+//
+//	Name:	Vladimir Petit-Homme
+
+//	Z#:	Z15346795
+//	Instructor:	Dr. Bullard
+//	Class:	Data Structures
+//	Term:	Fall 2021
+//	Assignment #10a (Recursion)
+//	Due Date:	November 21, 2021
+//	Due Time:	11:59PM
+//	Points:	25
+//
+//
+//******************************************************************************
+
+
 #include <iostream>
 #include <string>
 using namespace std;
-
+///////////////////////////////////////////////////////////////////////////////////////////////
+//Function Name: palindrome
+//Precondition:  none
+//Postcondition: String word is passed the initial parameter.
+//Description: This function constructs a recursive palindrome that returns true if the user inputs a palindrome
+///////////////////////////////////////////////////////////////////////////////////////////////
 bool palindrome(const string& s) {
     string word = s;
     string firstWord = word.substr(0,1);
     string lastWord = word.substr(word.length()-1);
-   
+
  int length = s.length();
 
  if(length == 1) {
@@ -29,6 +52,12 @@ if(firstWord==lastWord) {
 
 
 };
+///////////////////////////////////////////////////////////////////////////////////////////////
+//Function Name: printReversel
+//Precondition:  none
+//Postcondition: String word is passed the initial parameter.
+//Description: This function takes a users input and recursively prints the word in reverse
+///////////////////////////////////////////////////////////////////////////////////////////////
 string  printReversel(const string& s) {
     string word = s;
     int length = s.length();
@@ -43,6 +72,12 @@ string  printReversel(const string& s) {
 
 
 };
+///////////////////////////////////////////////////////////////////////////////////////////////
+//Function Name: printIterReverse
+//Precondition:  none
+//Postcondition: String word is passed the initial parameter. Empty string temp is created.
+//Description: This function takes a users input and iteratively prints the word in reverse
+///////////////////////////////////////////////////////////////////////////////////////////////
 string printIterReverse(const string& s) {
 
     string word =s;
